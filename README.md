@@ -23,6 +23,17 @@ The following clients must be installed on the machine used to follow this tutor
 * [consul](https://www.consul.io/downloads.html) 1.4.0-rc
 * [cfssl](https://pkg.cfssl.org) and [cfssljson](https://pkg.cfssl.org) 1.2
 
+  install: cfssl*
+   https://gist.github.com/guoyoujin/376bda5323b1d718d8d582f2efa5a8e6
+   
+    sudo curl -s -L -o /bin/cfssl https://pkg.cfssl.org/R1.2/cfssl_linux-amd64
+    sudo curl -s -L -o /bin/cfssljson https://pkg.cfssl.org/R1.2/cfssljson_linux-amd64
+    sudo curl -s -L -o /bin/cfssl-certinfo https://pkg.cfssl.org/R1.2/cfssl-certinfo_linux-amd64
+    sudo chmod +x /bin/cfssl*
+  install /bin/consul
+	  sudo curl -s -L -o /bin/consul https://releases.hashicorp.com/consul/1.4.4/consul_1.4.4_SHA256SUMS
+	  sudo chmod +x /bin/consul
+  
 ## Usage
 
 Clone this repo:
@@ -109,6 +120,10 @@ kubectl apply -f serviceaccounts/consul.yaml
 
 ```
 kubectl apply -f clusterroles/consul.yaml
+```
+#### but  clusterrolesbinding error so create
+```
+kubectl create clusterrolebinding cluster-admin-binding-consul --clusterrole=cluster-admin --serviceaccount=default:consul --namespace=default
 ```
 
 ### Create the Consul StatefulSet
