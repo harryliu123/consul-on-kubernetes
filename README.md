@@ -1,4 +1,5 @@
 # consul ACL service to service on Kubernetes
+![Image of Consul UI](images/acl_consul.jpg)
 # Running Consul on Kubernetes
 
 This tutorial will walk you through deploying a three (3) node [Consul](https://www.consul.io) cluster on Kubernetes.
