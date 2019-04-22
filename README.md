@@ -43,7 +43,7 @@ The following clients must be installed on the machine used to follow this tutor
 Clone this repo:
 
 ```
-git clone https://github.com/kelseyhightower/consul-on-kubernetes.git
+git clone https://github.com/harryliu123/consul-on-kubernetes.git
 ```
 
 Change into the `consul-on-kubernetes` directory:
