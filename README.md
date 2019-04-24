@@ -124,12 +124,10 @@ kubectl create -f services/consul.yaml
 kubectl apply -f serviceaccounts/consul.yaml
 ```
 
+#### clusterrolesbinding create
 ```
-kubectl apply -f clusterroles/consul.yaml
-```
-#### but  clusterrolesbinding error so create
-```
-kubectl create clusterrolebinding cluster-admin-binding-consul --clusterrole=cluster-admin --serviceaccount=default:consul --namespace=default
+kubectl create clusterrolebinding consul --clusterrole=cluster-admin --serviceaccount=default:consul
+   # kubectl apply -f clusterroles/consul.yaml
 ```
 
 ### Create the Consul StatefulSet
