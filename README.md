@@ -33,12 +33,12 @@ The following clients must be installed on the machine used to follow this tutor
     sudo curl -s -L -o /bin/cfssl-certinfo https://pkg.cfssl.org/R1.2/cfssl-certinfo_linux-amd64
     sudo chmod +x /bin/cfssl*
    ```
-### install /bin/consul
-	 
-	 ```
-	 sudo curl -s -L -o /bin/consul https://releases.hashicorp.com/consul/1.4.4/consul_1.4.4_SHA256SUMS
-	 sudo chmod +x /bin/consul
-	 ```
+### install /bin/consul 
+```
+sudo curl -o consul_1.4.4_linux_amd64.zip https://releases.hashicorp.com/consul/1.4.4/consul_1.4.4_linux_amd64.zip
+unzip consul_1.4.4_linux_amd64.zip
+sudo mv consul /bin/consul
+```
   
 ## Usage
 
